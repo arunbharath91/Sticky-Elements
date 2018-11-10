@@ -2,7 +2,7 @@
 
 **Sticky-elements plugin is added **Supports most of the screen sizes including tablets and mobiles. **licenced under the category of open-source free licence crendentials. **The information like company name or anything provided in this plugin is only an fake one.
 
-live demo:http://aruncoolpage.co.nf/PluginDemo/Sticky-elements/index.html
+live demo: http://aruncoolpage.co.nf/PluginDemo/Sticky-elements/index.html
 
 plugin author: M.Arun Bharath s/o A.Mathiyazhalagan
 
