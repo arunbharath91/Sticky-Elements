@@ -1,260 +1,251 @@
- <!DOCTYPE html>
-
-      <html lang="en">
-         <head>
-            <meta charset="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <title>Sticky elements</title>
-            <meta name="description" content="Sticky elements by Arun Bharath" />
-            <meta name="keywords" content= "Sticky elements by arun bharath" />
-            <meta name="author" content="Arun Bharath">
-            <link href="../../image/favicon.png" rel="icon" />
-     
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-         </head>
-         <body>
-		 
-		 
-<nav class="navbar navbar-default" data-fixed="50">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-    </ul>
-  </div>
-</nav>
-<div class="container">
-  <div class="jumbotron">
-    <pre>
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Sticky elements</title>
+      <meta name="description" content="Sticky elements by Arun Bharath" />
+      <meta name="keywords" content= "Sticky elements by arun bharath" />
+      <meta name="author" content="Arun Bharath">
+      <link rel="shortcut icon" href="../../images/favicon.ico" />
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   </head>
+   <body>
+      <nav class="navbar navbar-default" data-fixed="50">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <ul class="nav navbar-nav">
+               <li class="active"><a href="#">Home</a></li>
+               <li><a href="#">Page 1</a></li>
+               <li><a href="#">Page 2</a></li>
+               <li><a href="#">Page 3</a></li>
+            </ul>
+         </div>
+      </nav>
+      <div class="container">
+         <div class="jumbotron">
+            <pre>
 	**by default not having data-toggle attribute it uses default declared styles 
 	Ref:// ['position:fixed','z-index:1000','left:0','right:0','top:0','opacity:1','width:100%']
 	**if you set data-toggle, custom class can be applied to target div while scroll according data-fixed value.
 	</pre>
-  </div>
-  <p>This is some text.</p>
-  <p>This is another text.</p>
-  <div class="panel-group">
-  <div class="panel panel-default">
-    <div class="panel-body">Panel Content</div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-body">Panel Content</div>
-  </div>
-</div>
- <table class="table">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Default</td>
-        <td>Defaultson</td>
-        <td>def@somemail.com</td>
-      </tr>      
-      <tr class="success">
-        <td>Success</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr class="danger">
-        <td>Danger</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr class="info">
-        <td>Info</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-      <tr class="warning">
-        <td>Warning</td>
-        <td>Refs</td>
-        <td>bo@example.com</td>
-      </tr>
-      <tr class="active">
-        <td>Active</td>
-        <td>Activeson</td>
-        <td>act@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-  <table class="table gty">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Default</td>
-        <td>Defaultson</td>
-        <td>def@somemail.com</td>
-      </tr>      
-      <tr class="success">
-        <td>Success</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr class="danger">
-        <td>Danger</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr class="info">
-        <td>Info</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-      <tr class="warning">
-        <td>Warning</td>
-        <td>Refs</td>
-        <td>bo@example.com</td>
-      </tr>
-      <tr class="active">
-        <td>Active</td>
-        <td>Activeson</td>
-        <td>act@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-    <table class="table gty">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Default</td>
-        <td>Defaultson</td>
-        <td>def@somemail.com</td>
-      </tr>      
-      <tr class="success">
-        <td>Success</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr class="danger">
-        <td>Danger</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr class="info">
-        <td>Info</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-      <tr class="warning">
-        <td>Warning</td>
-        <td>Refs</td>
-        <td>bo@example.com</td>
-      </tr>
-      <tr class="active">
-        <td>Active</td>
-        <td>Activeson</td>
-        <td>act@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-  <table class="table gty">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Default</td>
-        <td>Defaultson</td>
-        <td>def@somemail.com</td>
-      </tr>      
-      <tr class="success">
-        <td>Success</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr class="danger">
-        <td>Danger</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr class="info">
-        <td>Info</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-      <tr class="warning">
-        <td>Warning</td>
-        <td>Refs</td>
-        <td>bo@example.com</td>
-      </tr>
-      <tr class="active">
-        <td>Active</td>
-        <td>Activeson</td>
-        <td>act@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-  
-</div>
-
-<script>
-// grab elements as array, rather than as NodeList
-var elements = document.querySelectorAll("[data-fixed]");
-elements = Array.prototype.slice.call(elements);
-
-// and then make each element do fixed on scroll
-elements.forEach(function(element) {
-window.addEventListener("scroll", function(){
-sticky(element,element.getAttribute('data-toggle'));
-});
-}); 
-	
-function sticky(target,toggleClass) {
-var stickyStyles;
-
-if(window.pageYOffset > target.getAttribute("data-fixed") && !(toggleClass)){
-stickyStyles = ['position:fixed','z-index:1000','left:0','right:0','top:0','opacity:1','width:100%'];
-target.setAttribute("style",stickyStyles.toString().replace(/,/g,';'));
-}
-
-else{
-target.removeAttribute("style");
-}
-
-
-
-if(window.pageYOffset > target.getAttribute("data-fixed") && toggleClass){
-target.classList.add(toggleClass);
-}
-
-else{
-target.classList.remove(toggleClass);
-}
-
-}
-
-
-</script>
-         </body>
-
-
-      </html>
+         </div>
+         <p>This is some text.</p>
+         <p>This is another text.</p>
+         <div class="panel-group">
+            <div class="panel panel-default">
+               <div class="panel-body">Panel Content</div>
+            </div>
+            <div class="panel panel-default">
+               <div class="panel-body">Panel Content</div>
+            </div>
+         </div>
+         <table class="table">
+            <thead>
+               <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Email</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Default</td>
+                  <td>Defaultson</td>
+                  <td>def@somemail.com</td>
+               </tr>
+               <tr class="success">
+                  <td>Success</td>
+                  <td>Doe</td>
+                  <td>john@example.com</td>
+               </tr>
+               <tr class="danger">
+                  <td>Danger</td>
+                  <td>Moe</td>
+                  <td>mary@example.com</td>
+               </tr>
+               <tr class="info">
+                  <td>Info</td>
+                  <td>Dooley</td>
+                  <td>july@example.com</td>
+               </tr>
+               <tr class="warning">
+                  <td>Warning</td>
+                  <td>Refs</td>
+                  <td>bo@example.com</td>
+               </tr>
+               <tr class="active">
+                  <td>Active</td>
+                  <td>Activeson</td>
+                  <td>act@example.com</td>
+               </tr>
+            </tbody>
+         </table>
+         <table class="table gty">
+            <thead>
+               <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Email</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Default</td>
+                  <td>Defaultson</td>
+                  <td>def@somemail.com</td>
+               </tr>
+               <tr class="success">
+                  <td>Success</td>
+                  <td>Doe</td>
+                  <td>john@example.com</td>
+               </tr>
+               <tr class="danger">
+                  <td>Danger</td>
+                  <td>Moe</td>
+                  <td>mary@example.com</td>
+               </tr>
+               <tr class="info">
+                  <td>Info</td>
+                  <td>Dooley</td>
+                  <td>july@example.com</td>
+               </tr>
+               <tr class="warning">
+                  <td>Warning</td>
+                  <td>Refs</td>
+                  <td>bo@example.com</td>
+               </tr>
+               <tr class="active">
+                  <td>Active</td>
+                  <td>Activeson</td>
+                  <td>act@example.com</td>
+               </tr>
+            </tbody>
+         </table>
+         <table class="table gty">
+            <thead>
+               <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Email</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Default</td>
+                  <td>Defaultson</td>
+                  <td>def@somemail.com</td>
+               </tr>
+               <tr class="success">
+                  <td>Success</td>
+                  <td>Doe</td>
+                  <td>john@example.com</td>
+               </tr>
+               <tr class="danger">
+                  <td>Danger</td>
+                  <td>Moe</td>
+                  <td>mary@example.com</td>
+               </tr>
+               <tr class="info">
+                  <td>Info</td>
+                  <td>Dooley</td>
+                  <td>july@example.com</td>
+               </tr>
+               <tr class="warning">
+                  <td>Warning</td>
+                  <td>Refs</td>
+                  <td>bo@example.com</td>
+               </tr>
+               <tr class="active">
+                  <td>Active</td>
+                  <td>Activeson</td>
+                  <td>act@example.com</td>
+               </tr>
+            </tbody>
+         </table>
+         <table class="table gty">
+            <thead>
+               <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Email</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Default</td>
+                  <td>Defaultson</td>
+                  <td>def@somemail.com</td>
+               </tr>
+               <tr class="success">
+                  <td>Success</td>
+                  <td>Doe</td>
+                  <td>john@example.com</td>
+               </tr>
+               <tr class="danger">
+                  <td>Danger</td>
+                  <td>Moe</td>
+                  <td>mary@example.com</td>
+               </tr>
+               <tr class="info">
+                  <td>Info</td>
+                  <td>Dooley</td>
+                  <td>july@example.com</td>
+               </tr>
+               <tr class="warning">
+                  <td>Warning</td>
+                  <td>Refs</td>
+                  <td>bo@example.com</td>
+               </tr>
+               <tr class="active">
+                  <td>Active</td>
+                  <td>Activeson</td>
+                  <td>act@example.com</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <script>
+         // grab elements as array, rather than as NodeList
+         var elements = document.querySelectorAll("[data-fixed]");
+         elements = Array.prototype.slice.call(elements);
+         
+         // and then make each element do fixed on scroll
+         elements.forEach(function(element) {
+         window.addEventListener("scroll", function(){
+         sticky(element,element.getAttribute('data-toggle'));
+         });
+         }); 
+         	
+         function sticky(target,toggleClass) {
+         var stickyStyles;
+         
+         if(window.pageYOffset > target.getAttribute("data-fixed") && !(toggleClass)){
+         stickyStyles = ['position:fixed','z-index:1000','left:0','right:0','top:0','opacity:1','width:100%'];
+         target.setAttribute("style",stickyStyles.toString().replace(/,/g,';'));
+         }
+         
+         else{
+         target.removeAttribute("style");
+         }
+         
+         
+         
+         if(window.pageYOffset > target.getAttribute("data-fixed") && toggleClass){
+         target.classList.add(toggleClass);
+         }
+         
+         else{
+         target.classList.remove(toggleClass);
+         }
+         
+         }
+         
+         
+      </script>
+   </body>
+</html>
