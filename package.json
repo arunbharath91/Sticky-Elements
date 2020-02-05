@@ -6,9 +6,10 @@
   "scripts": {
     "start": "node dist/sticky.js",
     "dev": "nodemon src/sticky.ts",
-    "build": "tsc -p src/tsconfig.app.json"
+    "build": "tsc -p src/tsconfig.app.json && copyfiles -u 1 src/**/*.html src/**/*.css src/assets/**/* dist"
   },
   "devDependencies": {
+    "copyfiles": "^2.2.0",
     "nodemon": "^2.0.2",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.6.2",
