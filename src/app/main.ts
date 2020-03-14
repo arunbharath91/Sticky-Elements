@@ -1,2 +1,2 @@
 import '../style.scss';
-import "./sticky";
+import './sticky-config';

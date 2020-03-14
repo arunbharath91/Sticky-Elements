@@ -1,30 +1,30 @@
 
-class Sticky {
+export class Sticky {
+  private element!: HTMLElement;
+  private toggleAttr!: string;
+  private stickyStyles: string[] = ['position:fixed','z-index:1000','left:0','right:0','top:0','opacity:1','width:100%'];
+  constructor() {
 
-  constructor(selector?: string) {
-  this.registerEvents(selector);
   }
 
-  registerEvents(selectorName: string = '[data-fixed]'){
-    // grab elements as array, rather than as NodeList
-    const elements = document.querySelectorAll(selectorName);
-    const elementsArray: HTMLElement[] = Array.prototype.slice.call(elements);
-
+  add(selectorName: string = '[data-fixed]', styles?: string[]) {
+    this.element = document.querySelector(selectorName) as HTMLElement;
+    this.toggleAttr = this.element.getAttribute('data-toggle') as string;
+    (styles) ? this.stickyStyles = styles: null;
     // and then make each element do fixed on scroll
-    elementsArray.forEach((element) => {
     window.addEventListener("scroll", () =>{
-    this.bootSticky(element, element.getAttribute('data-toggle'));
+    this.bootSticky();
     });
+    window.addEventListener("load", () =>{
+    this.bootSticky();
     });
   }
 
 
-  bootSticky(target: HTMLElement, toggleAttr: any) {
-  let stickyStyles;
+  bootSticky(target: HTMLElement = this.element, toggleAttr: any = this.toggleAttr) {
 
   if(window.pageYOffset > Number(target.getAttribute("data-fixed")) && !(toggleAttr)){
-  stickyStyles = ['position:fixed','z-index:1000','left:0','right:0','top:0','opacity:1','width:100%'];
-  target.setAttribute("style", stickyStyles.toString().replace(/,/g,';'));
+  target.setAttribute("style", this.stickyStyles.toString().replace(/,/g,';'));
   } else {
   target.removeAttribute("style");
   }
@@ -37,5 +37,3 @@ class Sticky {
 
   }
 }
-
-const sticky = new Sticky();
