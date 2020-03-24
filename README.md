@@ -1,8 +1,8 @@
-# Sticky-elements
+# Sticky-Elements
 
-**Sticky-elements plugin is added **Supports most of the screen sizes including tablets and mobiles. **licenced under the category of open-source free licence crendentials. **The information like company name or anything provided in this plugin is only an fake one.
+**Sticky-Elements plugin is added **Supports most of the screen sizes including tablets and mobiles. **licenced under the category of open-source free licence crendentials. **The information like company name or anything provided in this plugin is only an fake one.
 
-live demo: http://arunbharath.c1.biz/PluginDemo/Sticky-elements/index.html
+live demo: http://arunbharath.c1.biz/PluginDemo/Sticky-Elements
 
 plugin author: M.Arun Bharath s/o A.Mathiyazhalagan
 
