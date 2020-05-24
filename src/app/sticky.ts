@@ -8,7 +8,7 @@ export class Sticky {
 
   }
 
-  add(selectorName: string = '[data-fixed]', styles: string[] = []) {
+  public add(selectorName: string = '[data-fixed]', styles: string[] = []) {
     this.element = document.querySelector(selectorName) as HTMLElement;
     this.toggleAttr = this.element.getAttribute('data-toggle') as string;
     this.stickyStyles = ([...defaultStyles, ...styles]);
@@ -23,7 +23,7 @@ export class Sticky {
   }
 
 
-  bootSticky() {
+  protected bootSticky() {
   const triggerSticky:boolean = window.pageYOffset > Number(this.element.getAttribute("data-fixed"));
   if(this.toggleAttr) {
     (triggerSticky) ?
