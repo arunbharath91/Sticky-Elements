@@ -1,218 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <title>Sticky elements</title>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="theme-color" content="#2c58ed" />
-      <meta name="description" content="Sticky elements by Arun Bharath" />
-      <meta name="keywords" content= "Sticky elements by arun bharath" />
-      <meta name="author" content="Arun Bharath">
-      <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
-      <!-- Latest compiled and minified CSS -->
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap" rel="stylesheet">
 
-   </head>
-   <body>
+<head>
+   <title>Sticky elements</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta name="theme-color" content="#2c58ed" />
+   <meta name="description" content="Sticky elements by Arun Bharath" />
+   <meta name="keywords" content="Sticky elements by arun bharath" />
+   <meta name="author" content="Arun Bharath">
+   <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
+   <!-- Latest compiled and minified CSS -->
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap" rel="stylesheet">
 
-<button id="sticky" data-toggle="" class="btn btn-primary">hai</button>
+</head>
 
-      <nav class="navbar navbar-default fixed-nav" data-fixed="50">
-         <div class="container-fluid">
-            <div class="navbar-header">
-               <a class="navbar-brand" href="#">WebSiteName</a>
-            </div>
-            <ul class="nav navbar-nav">
-               <li class="active"><a href="#">Home</a></li>
-               <li><a href="#">Page 1</a></li>
-               <li><a href="#">Page 2</a></li>
-               <li><a href="#">Page 3</a></li>
-            </ul>
+<body>
+   <pre>
+         <code>
+         configuration :
+         1) Supports mutiple instance
+         2) data-fixed="50" attribute  is used in html side for positioning of elements.
+         3) const sticky = new Sticky();
+         sticky.add('[data-fixed]');
+         </code>
+         </pre>
+   <hr />
+   <h1>Sticky Elements</h1>
+   <button id="sticky" data-toggle="" class="btn btn-primary">hai</button>
+
+   <nav class="navbar navbar-default fixed-nav" data-fixed="50">
+      <div class="container-fluid">
+         <div class="navbar-header">
+            <a class="navbar-brand" href="#">WebSiteName</a>
          </div>
-      </nav>
-      <div class="container">
-         <div class="jumbotron">
-            <pre>
+         <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+         </ul>
+      </div>
+   </nav>
+   <div class="container">
+      <div class="jumbotron">
+         <pre>
 	**by default not having data-toggle attribute it uses default declared styles
 	Ref:// ['position:fixed','z-index:1000','left:0','right:0','top:0','opacity:1','width:100%']
 	**if you set data-toggle, custom class can be applied to target div while scroll according data-fixed value.
 	</pre>
-         </div>
-         <p>This is some text.</p>
-         <p>This is another text.</p>
-         <div class="panel-group">
-            <div class="panel panel-default">
-               <div class="panel-body">Panel Content</div>
-            </div>
-            <div class="panel panel-default">
-               <div class="panel-body">Panel Content</div>
-            </div>
-         </div>
-         <table class="table">
-            <thead>
-               <tr>
-                  <th>Firstname</th>
-                  <th>Lastname</th>
-                  <th>Email</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td>Default</td>
-                  <td>Defaultson</td>
-                  <td>def@somemail.com</td>
-               </tr>
-               <tr class="success">
-                  <td>Success</td>
-                  <td>Doe</td>
-                  <td>john@example.com</td>
-               </tr>
-               <tr class="danger">
-                  <td>Danger</td>
-                  <td>Moe</td>
-                  <td>mary@example.com</td>
-               </tr>
-               <tr class="info">
-                  <td>Info</td>
-                  <td>Dooley</td>
-                  <td>july@example.com</td>
-               </tr>
-               <tr class="warning">
-                  <td>Warning</td>
-                  <td>Refs</td>
-                  <td>bo@example.com</td>
-               </tr>
-               <tr class="active">
-                  <td>Active</td>
-                  <td>Activeson</td>
-                  <td>act@example.com</td>
-               </tr>
-            </tbody>
-         </table>
-         <table class="table gty">
-            <thead>
-               <tr>
-                  <th>Firstname</th>
-                  <th>Lastname</th>
-                  <th>Email</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td>Default</td>
-                  <td>Defaultson</td>
-                  <td>def@somemail.com</td>
-               </tr>
-               <tr class="success">
-                  <td>Success</td>
-                  <td>Doe</td>
-                  <td>john@example.com</td>
-               </tr>
-               <tr class="danger">
-                  <td>Danger</td>
-                  <td>Moe</td>
-                  <td>mary@example.com</td>
-               </tr>
-               <tr class="info">
-                  <td>Info</td>
-                  <td>Dooley</td>
-                  <td>july@example.com</td>
-               </tr>
-               <tr class="warning">
-                  <td>Warning</td>
-                  <td>Refs</td>
-                  <td>bo@example.com</td>
-               </tr>
-               <tr class="active">
-                  <td>Active</td>
-                  <td>Activeson</td>
-                  <td>act@example.com</td>
-               </tr>
-            </tbody>
-         </table>
-         <table class="table gty">
-            <thead>
-               <tr>
-                  <th>Firstname</th>
-                  <th>Lastname</th>
-                  <th>Email</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td>Default</td>
-                  <td>Defaultson</td>
-                  <td>def@somemail.com</td>
-               </tr>
-               <tr class="success">
-                  <td>Success</td>
-                  <td>Doe</td>
-                  <td>john@example.com</td>
-               </tr>
-               <tr class="danger">
-                  <td>Danger</td>
-                  <td>Moe</td>
-                  <td>mary@example.com</td>
-               </tr>
-               <tr class="info">
-                  <td>Info</td>
-                  <td>Dooley</td>
-                  <td>july@example.com</td>
-               </tr>
-               <tr class="warning">
-                  <td>Warning</td>
-                  <td>Refs</td>
-                  <td>bo@example.com</td>
-               </tr>
-               <tr class="active">
-                  <td>Active</td>
-                  <td>Activeson</td>
-                  <td>act@example.com</td>
-               </tr>
-            </tbody>
-         </table>
-         <table class="table gty">
-            <thead>
-               <tr>
-                  <th>Firstname</th>
-                  <th>Lastname</th>
-                  <th>Email</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td>Default</td>
-                  <td>Defaultson</td>
-                  <td>def@somemail.com</td>
-               </tr>
-               <tr class="success">
-                  <td>Success</td>
-                  <td>Doe</td>
-                  <td>john@example.com</td>
-               </tr>
-               <tr class="danger">
-                  <td>Danger</td>
-                  <td>Moe</td>
-                  <td>mary@example.com</td>
-               </tr>
-               <tr class="info">
-                  <td>Info</td>
-                  <td>Dooley</td>
-                  <td>july@example.com</td>
-               </tr>
-               <tr class="warning">
-                  <td>Warning</td>
-                  <td>Refs</td>
-                  <td>bo@example.com</td>
-               </tr>
-               <tr class="active">
-                  <td>Active</td>
-                  <td>Activeson</td>
-                  <td>act@example.com</td>
-               </tr>
-            </tbody>
-         </table>
       </div>
-   </body>
+      <p>This is some text.</p>
+      <p>This is another text.</p>
+      <div class="panel-group">
+         <div class="panel panel-default">
+            <div class="panel-body">Panel Content</div>
+         </div>
+         <div class="panel panel-default">
+            <div class="panel-body">Panel Content</div>
+         </div>
+      </div>
+      <table class="table">
+         <thead>
+            <tr>
+               <th>Firstname</th>
+               <th>Lastname</th>
+               <th>Email</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>Default</td>
+               <td>Defaultson</td>
+               <td>def@somemail.com</td>
+            </tr>
+            <tr class="success">
+               <td>Success</td>
+               <td>Doe</td>
+               <td>john@example.com</td>
+            </tr>
+            <tr class="danger">
+               <td>Danger</td>
+               <td>Moe</td>
+               <td>mary@example.com</td>
+            </tr>
+            <tr class="info">
+               <td>Info</td>
+               <td>Dooley</td>
+               <td>july@example.com</td>
+            </tr>
+            <tr class="warning">
+               <td>Warning</td>
+               <td>Refs</td>
+               <td>bo@example.com</td>
+            </tr>
+            <tr class="active">
+               <td>Active</td>
+               <td>Activeson</td>
+               <td>act@example.com</td>
+            </tr>
+         </tbody>
+      </table>
+      <table class="table gty">
+         <thead>
+            <tr>
+               <th>Firstname</th>
+               <th>Lastname</th>
+               <th>Email</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>Default</td>
+               <td>Defaultson</td>
+               <td>def@somemail.com</td>
+            </tr>
+            <tr class="success">
+               <td>Success</td>
+               <td>Doe</td>
+               <td>john@example.com</td>
+            </tr>
+            <tr class="danger">
+               <td>Danger</td>
+               <td>Moe</td>
+               <td>mary@example.com</td>
+            </tr>
+            <tr class="info">
+               <td>Info</td>
+               <td>Dooley</td>
+               <td>july@example.com</td>
+            </tr>
+            <tr class="warning">
+               <td>Warning</td>
+               <td>Refs</td>
+               <td>bo@example.com</td>
+            </tr>
+            <tr class="active">
+               <td>Active</td>
+               <td>Activeson</td>
+               <td>act@example.com</td>
+            </tr>
+         </tbody>
+      </table>
+      <table class="table gty">
+         <thead>
+            <tr>
+               <th>Firstname</th>
+               <th>Lastname</th>
+               <th>Email</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>Default</td>
+               <td>Defaultson</td>
+               <td>def@somemail.com</td>
+            </tr>
+            <tr class="success">
+               <td>Success</td>
+               <td>Doe</td>
+               <td>john@example.com</td>
+            </tr>
+            <tr class="danger">
+               <td>Danger</td>
+               <td>Moe</td>
+               <td>mary@example.com</td>
+            </tr>
+            <tr class="info">
+               <td>Info</td>
+               <td>Dooley</td>
+               <td>july@example.com</td>
+            </tr>
+            <tr class="warning">
+               <td>Warning</td>
+               <td>Refs</td>
+               <td>bo@example.com</td>
+            </tr>
+            <tr class="active">
+               <td>Active</td>
+               <td>Activeson</td>
+               <td>act@example.com</td>
+            </tr>
+         </tbody>
+      </table>
+      <table class="table gty">
+         <thead>
+            <tr>
+               <th>Firstname</th>
+               <th>Lastname</th>
+               <th>Email</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>Default</td>
+               <td>Defaultson</td>
+               <td>def@somemail.com</td>
+            </tr>
+            <tr class="success">
+               <td>Success</td>
+               <td>Doe</td>
+               <td>john@example.com</td>
+            </tr>
+            <tr class="danger">
+               <td>Danger</td>
+               <td>Moe</td>
+               <td>mary@example.com</td>
+            </tr>
+            <tr class="info">
+               <td>Info</td>
+               <td>Dooley</td>
+               <td>july@example.com</td>
+            </tr>
+            <tr class="warning">
+               <td>Warning</td>
+               <td>Refs</td>
+               <td>bo@example.com</td>
+            </tr>
+            <tr class="active">
+               <td>Active</td>
+               <td>Activeson</td>
+               <td>act@example.com</td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</body>
+
 </html>
