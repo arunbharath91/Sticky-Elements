@@ -1,6 +1,5 @@
-
-
-
-.fixed-nav{
-  background: red;
+.sticky {
+  position: fixed;
+  top     : 10%;
+  transition: top 2s ease 0s; /* only transition top property */
 }

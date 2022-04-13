@@ -13,7 +13,8 @@
    <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
    <!-- Latest compiled and minified CSS -->
    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap" rel="stylesheet">
-
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
@@ -22,45 +23,57 @@
          configuration :
          1) Supports mutiple instance
          2) data-fixed="50" attribute  is used in html side for positioning of elements.
-         3) const sticky = new Sticky();
-         sticky.add('[data-fixed]');
+         3) data-toogle="classname" attribute  is used to toggle classes in positioned elements.
+         4) data-breakpoint="767px" disable sticky functionality below 767 screen size like mobile.
+         5) const sticky = new Sticky('#sticky');
          </code>
          </pre>
    <hr />
-   <h1>Sticky Elements</h1>
-   <button id="sticky" data-toggle="" class="btn btn-primary">hai</button>
-
-   <nav class="navbar navbar-default fixed-nav" data-fixed="50">
+   <h1>Sticky Elements <span style="font-size: small;">Below navbar is sticky at offset 250</span></h1>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light" id="sticky" data-breakpoint="767px" data-fixed="250" data-toggle="fixed-top">
       <div class="container-fluid">
-         <div class="navbar-header">
-            <a class="navbar-brand" href="#">WebSiteName</a>
+         <a class="navbar-brand" href="#">Navbar</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                     data-bs-toggle="dropdown" aria-expanded="false">
+                     Dropdown
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                     <li><a class="dropdown-item" href="#">Action</a></li>
+                     <li><a class="dropdown-item" href="#">Another action</a></li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+               </li>
+            </ul>
+            <form class="d-flex">
+               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+               <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
          </div>
-         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
-         </ul>
       </div>
    </nav>
+
    <div class="container">
-      <div class="jumbotron">
-         <pre>
-	**by default not having data-toggle attribute it uses default declared styles
-	Ref:// ['position:fixed','z-index:1000','left:0','right:0','top:0','opacity:1','width:100%']
-	**if you set data-toggle, custom class can be applied to target div while scroll according data-fixed value.
-	</pre>
-      </div>
-      <p>This is some text.</p>
-      <p>This is another text.</p>
-      <div class="panel-group">
-         <div class="panel panel-default">
-            <div class="panel-body">Panel Content</div>
-         </div>
-         <div class="panel panel-default">
-            <div class="panel-body">Panel Content</div>
-         </div>
-      </div>
+
+
       <table class="table">
          <thead>
             <tr>
@@ -143,88 +156,102 @@
             </tr>
          </tbody>
       </table>
-      <table class="table gty">
-         <thead>
-            <tr>
-               <th>Firstname</th>
-               <th>Lastname</th>
-               <th>Email</th>
-            </tr>
-         </thead>
-         <tbody>
-            <tr>
-               <td>Default</td>
-               <td>Defaultson</td>
-               <td>def@somemail.com</td>
-            </tr>
-            <tr class="success">
-               <td>Success</td>
-               <td>Doe</td>
-               <td>john@example.com</td>
-            </tr>
-            <tr class="danger">
-               <td>Danger</td>
-               <td>Moe</td>
-               <td>mary@example.com</td>
-            </tr>
-            <tr class="info">
-               <td>Info</td>
-               <td>Dooley</td>
-               <td>july@example.com</td>
-            </tr>
-            <tr class="warning">
-               <td>Warning</td>
-               <td>Refs</td>
-               <td>bo@example.com</td>
-            </tr>
-            <tr class="active">
-               <td>Active</td>
-               <td>Activeson</td>
-               <td>act@example.com</td>
-            </tr>
-         </tbody>
-      </table>
-      <table class="table gty">
-         <thead>
-            <tr>
-               <th>Firstname</th>
-               <th>Lastname</th>
-               <th>Email</th>
-            </tr>
-         </thead>
-         <tbody>
-            <tr>
-               <td>Default</td>
-               <td>Defaultson</td>
-               <td>def@somemail.com</td>
-            </tr>
-            <tr class="success">
-               <td>Success</td>
-               <td>Doe</td>
-               <td>john@example.com</td>
-            </tr>
-            <tr class="danger">
-               <td>Danger</td>
-               <td>Moe</td>
-               <td>mary@example.com</td>
-            </tr>
-            <tr class="info">
-               <td>Info</td>
-               <td>Dooley</td>
-               <td>july@example.com</td>
-            </tr>
-            <tr class="warning">
-               <td>Warning</td>
-               <td>Refs</td>
-               <td>bo@example.com</td>
-            </tr>
-            <tr class="active">
-               <td>Active</td>
-               <td>Activeson</td>
-               <td>act@example.com</td>
-            </tr>
-         </tbody>
-      </table>
+
+      <div class="col-md-4 bg-primary" id="panel" data-toggle="sticky" data-fixed="450">
+         <p class="p-4 text-white">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+         </p>
+      </div>
+
+   </div>
+
+   <table class="table gty">
+      <thead>
+         <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>Default</td>
+            <td>Defaultson</td>
+            <td>def@somemail.com</td>
+         </tr>
+         <tr class="success">
+            <td>Success</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+         </tr>
+         <tr class="danger">
+            <td>Danger</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+         </tr>
+         <tr class="info">
+            <td>Info</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+         </tr>
+         <tr class="warning">
+            <td>Warning</td>
+            <td>Refs</td>
+            <td>bo@example.com</td>
+         </tr>
+         <tr class="active">
+            <td>Active</td>
+            <td>Activeson</td>
+            <td>act@example.com</td>
+         </tr>
+      </tbody>
+   </table>
+   <table class="table gty">
+      <thead>
+         <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>Default</td>
+            <td>Defaultson</td>
+            <td>def@somemail.com</td>
+         </tr>
+         <tr class="success">
+            <td>Success</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+         </tr>
+         <tr class="danger">
+            <td>Danger</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+         </tr>
+         <tr class="info">
+            <td>Info</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+         </tr>
+         <tr class="warning">
+            <td>Warning</td>
+            <td>Refs</td>
+            <td>bo@example.com</td>
+         </tr>
+         <tr class="active">
+            <td>Active</td>
+            <td>Activeson</td>
+            <td>act@example.com</td>
+         </tr>
+      </tbody>
+   </table>
    </div>
 </body>
 

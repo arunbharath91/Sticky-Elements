@@ -1,38 +1,41 @@
-const defaultStyles:string[] = ['position:fixed','z-index:1000','left:0','right:0','top:0','opacity:1','width:100%']
+
 export class Sticky {
   private element!: HTMLElement;
-  private toggleAttr!: string;
-  private stickyStyles!: string[];
-  private computedStyles!: string;
-  constructor() {
-
+  private stickyPostion!: number;
+  private dataToggle!: string;
+  private breakpointUnit!: string;
+  constructor(selectorName: string = '[data-fixed]') {
+    this.add(selectorName);
   }
 
-  public add(selectorName: string = '[data-fixed]', styles: string[] = []) {
+
+  private add(selectorName: string) {
     this.element = document.querySelector(selectorName) as HTMLElement;
-    this.toggleAttr = this.element.getAttribute('data-toggle') as string;
-    this.stickyStyles = ([...defaultStyles, ...styles]);
-    this.computedStyles = this.stickyStyles.toString().replace(/,/g,';');
+    this.stickyPostion = Number(this.element.getAttribute("data-fixed"));
+    // you can data-toggle if u want toggle between class
+    this.dataToggle = this.element.getAttribute('data-toggle') as string;
+    this.breakpointUnit = this.element.getAttribute('data-breakpoint') as string;
     // and then make each element do fixed on scroll
-    window.addEventListener("scroll", () =>{
-    this.bootSticky();
+    window.addEventListener("scroll", (e) => {
+      this.bootSticky(e);
     });
-    window.addEventListener("load", () =>{
-    this.bootSticky();
+    window.addEventListener("load", (e) => {
+      this.bootSticky(e);
     });
   }
 
 
-  protected bootSticky() {
-  const triggerSticky:boolean = window.pageYOffset > Number(this.element.getAttribute("data-fixed"));
-  if(this.toggleAttr) {
-    (triggerSticky) ?
-    this.element.classList.add(this.toggleAttr) :
-    this.element.classList.remove(this.toggleAttr);
-  } else {
-    (triggerSticky) ?
-    this.element.setAttribute("style", this.computedStyles) :
-    this.element.removeAttribute("style");
-  }
+  protected bootSticky(e: Event) {
+    if (this.breakpointUnit && window.matchMedia(`(max-width: ${this.breakpointUnit})`).matches) {
+      e.preventDefault();
+      e.stopPropagation();
+      return;
+    }
+    if (this.dataToggle) {
+      const triggerSticky: boolean = window.pageYOffset > Number(this.stickyPostion);
+      (triggerSticky) ?
+        this.element.classList.add(this.dataToggle) :
+        this.element.classList.remove(this.dataToggle);
+    }
   }
 }

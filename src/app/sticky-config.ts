@@ -1,4 +1,4 @@
 import { Sticky } from "./sticky";
 
-const sticky = new Sticky();
-sticky.add('[data-fixed]');
+const sticky = new Sticky('#sticky');
+const panel = new Sticky('#panel');
